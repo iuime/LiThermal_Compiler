@@ -1,10 +1,9 @@
 #!/bin/bash
 ROOTPATH=`pwd`
-rm -rf $ROOTPATH/LiThermal
-if [ -d $ROOTPATH/LiThermal ]; then
+if [ -d $ROOTPATH/LiThermal-Revised ]; then
     echo "Updating..."
     git submodule update --init --recursive
-    cd LiThermal
+    cd LiThermal-Revised
     git remote set-url origin https://github.com/mcdudu233/LiThermal-Revised.git
     cd ..
 else
@@ -15,7 +14,7 @@ fi
 export STAGING_DIR=$ROOTPATH/target
 mkdir build
 cd build
-cmake $ROOTPATH/LiThermal -DROOTPATH=$ROOTPATH -DCMAKE_TOOLCHAIN_FILE=$ROOTPATH/LiThermal/toolchain.cmake
+cmake $ROOTPATH/LiThermal-Revised -DROOTPATH=$ROOTPATH -DCMAKE_TOOLCHAIN_FILE=$ROOTPATH/LiThermal-Revised/toolchain.cmake
 make -j`nproc`
 
 # compile BSOD
