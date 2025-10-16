@@ -4,8 +4,7 @@ if [ -d $ROOTPATH/LiThermal ]; then
     echo "Updating..."
     git submodule update --init --recursive
     cd LiThermal
-    git checkout master
-    git pull origin master
+    git remote set-url origin https://github.com/mcdudu233/LiThermal-Revised.git
     cd ..
 else
     echo "Folder not exist, cloning..."
