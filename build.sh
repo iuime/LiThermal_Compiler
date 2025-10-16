@@ -1,5 +1,6 @@
 #!/bin/bash
 ROOTPATH=`pwd`
+rm -rf $ROOTPATH/LiThermal
 if [ -d $ROOTPATH/LiThermal ]; then
     echo "Updating..."
     git submodule update --init --recursive
