@@ -9,7 +9,7 @@ if [ -d $ROOTPATH/LiThermal ]; then
     cd ..
 else
     echo "Folder not exist, cloning..."
-    git clone https://github.com/diylxy/LiThermal.git
+    git clone https://github.com/mcdudu233/LiThermal-Revised.git
 fi
 
 export STAGING_DIR=$ROOTPATH/target
